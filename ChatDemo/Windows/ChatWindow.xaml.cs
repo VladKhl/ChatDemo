@@ -55,9 +55,9 @@ namespace ChatDemo.Windows
 
         private void AddUserBtn_Click(object sender, RoutedEventArgs e)
         {
-            //var window = new AddUserWindow(lst, eChatRoom.Id_ChatRoom);
-            //window.Closing += (q, s) => Update();
-            //window.Show();
+            var window = new AddUserWindow(lst, eChatRoom.Id_ChatRoom);
+            window.Closing += (q, s) => Update();
+            window.Show();
         }
 
         private void SendMessageBtn_Click(object sender, RoutedEventArgs e)

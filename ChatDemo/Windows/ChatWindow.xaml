@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:ChatDemo.Windows"
         mc:Ignorable="d"
         Title="Topic"
+        FontFamily="Bahnschrift"
+        FontSize="14"
         Width="600"
         Height="450">
     <Grid>
