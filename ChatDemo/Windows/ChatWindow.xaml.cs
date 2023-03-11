@@ -63,7 +63,16 @@ namespace ChatDemo.Windows
 
         private void SendMessageBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            ChatMessage msg = new ChatMessage
+            {
+                Sender_Id = App.user.Id,
+                Chatroom_Id = eChatRoom.Id_ChatRoom,
+                Date = DateTime.Now,
+                Message = tbMessage.Text
+            };
+            App.db.ChatMessage.Add(msg);
+            App.db.SaveChanges();
+            MessagesLstView.ItemsSource = App.db.ChatMessage.Where(x => x.Chatroom_Id == eChatRoom.Id_ChatRoom).ToList();
         }
     }
 }
