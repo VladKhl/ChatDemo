@@ -63,7 +63,7 @@ namespace ChatDemo.Windows
 
         private void EmployeeFinderBtn_Click(object sender, RoutedEventArgs e)
         {
-            //new EmployeeFinderWindow().Show();
+            new FindEmployeeWindow().Show();
         }
     }
 }

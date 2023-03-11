@@ -27,6 +27,7 @@ namespace ChatDemo.Windows
             InitializeComponent();
             eChatRoom = item;
             Update();
+            MessagesLstView.ItemsSource = App.db.ChatMessage.Where(x => x.Chatroom_Id == eChatRoom.Id_ChatRoom).ToList();
         }
 
         private void Update()
